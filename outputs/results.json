@@ -1,0 +1,198 @@
+{
+  "qc": {
+    "Rows": "1612",
+    "Columns": "11",
+    "Unique subjects": "124",
+    "Unique masks": "13",
+    "Missing values": "0",
+    "Duplicate subject-mask rows": "0",
+    "Negative numeric values": "0",
+    "Modality (constant, not used as covariate)": "epc",
+    "Age range (years)": "7.38 to 17.20",
+    "All subjects have 13 masks": "True",
+    "Demographics constant per subject": "True",
+    "Whole-brain count = Left + Right": "True",
+    "Zero-ePVS rows (no ePVS detected)": "21 (1.3%)",
+    "Subjects per group": "A=55; B=11; C=26; D=32"
+  },
+  "baseline_balance": {
+    "age_p": 0.13510899122448505,
+    "sex_p": 0.06520254008438606,
+    "handedness_p": 0.14423025239815218
+  },
+  "mask_size": {
+    "corr_volume_rawcount": 0.8347409786419836,
+    "corr_volume_density": 0.47753837760976425
+  },
+  "age_density_r": 0.43962268674641314,
+  "distribution_checks": [
+    {
+      "outcome": "pvs_count",
+      "skewness": 0.86,
+      "shapiro_p_raw": 0.0006,
+      "shapiro_p_log": 0.6957,
+      "decision": "log-transform"
+    },
+    {
+      "outcome": "density",
+      "skewness": 0.47,
+      "shapiro_p_raw": 0.0366,
+      "shapiro_p_log": 0.2272,
+      "decision": "keep raw"
+    },
+    {
+      "outcome": "vol_fraction",
+      "skewness": 0.71,
+      "shapiro_p_raw": 0.0045,
+      "shapiro_p_log": 0.5218,
+      "decision": "log-transform"
+    },
+    {
+      "outcome": "diameter",
+      "skewness": 0.23,
+      "shapiro_p_raw": 0.4936,
+      "shapiro_p_log": 0.7419,
+      "decision": "keep raw"
+    }
+  ],
+  "global_ancova": [
+    {
+      "outcome": "ePVS density",
+      "col": "log_density",
+      "oneway_anova_p": 0.0038724864779359582,
+      "kruskal_p": 0.013609470894596123,
+      "ancova_group_F": 3.5631652977777795,
+      "ancova_group_p": 0.016388064592117224,
+      "partial_eta2": 0.08371476305508256,
+      "resid_shapiro_p": 0.10586232891634534,
+      "levene_p": 0.9611908904743772,
+      "age_p": 1.407809202767257e-06,
+      "sex_p": 0.05333015753945089,
+      "handedness_p": 0.40993304947933146,
+      "ancova_p_fdr": 0.04916419377635167
+    },
+    {
+      "outcome": "ePVS volume fraction",
+      "col": "log_vol_fraction",
+      "oneway_anova_p": 0.21209553169568282,
+      "kruskal_p": 0.22541047069960757,
+      "ancova_group_F": 0.9383041598795104,
+      "ancova_group_p": 0.4245866735709627,
+      "partial_eta2": 0.02349384080313793,
+      "resid_shapiro_p": 0.9112485364824199,
+      "levene_p": 0.8561567554797478,
+      "age_p": 0.0005073138450839695,
+      "sex_p": 0.0003275952392588296,
+      "handedness_p": 0.09276568547472194,
+      "ancova_p_fdr": 0.636880010356444
+    },
+    {
+      "outcome": "ePVS diameter",
+      "col": "diameter_nozeros",
+      "oneway_anova_p": 0.9703502605770385,
+      "kruskal_p": 0.9982953718457408,
+      "ancova_group_F": 0.306660688105207,
+      "ancova_group_p": 0.8205303335830267,
+      "partial_eta2": 0.007801748679149619,
+      "resid_shapiro_p": 0.11013119004064476,
+      "levene_p": 0.47660794625464853,
+      "age_p": 0.22105962308081611,
+      "sex_p": 0.0030054211016152924,
+      "handedness_p": 0.23528857824724755,
+      "ancova_p_fdr": 0.8205303335830267
+    }
+  ],
+  "posthoc": [
+    {
+      "outcome": "ePVS density",
+      "group1": "A",
+      "group2": "B",
+      "mean_diff": 0.164,
+      "p_adj": 0.0018,
+      "reject_H0": true,
+      "cohens_d": -1.19
+    },
+    {
+      "outcome": "ePVS density",
+      "group1": "A",
+      "group2": "C",
+      "mean_diff": 0.0404,
+      "p_adj": 0.5842,
+      "reject_H0": false,
+      "cohens_d": -0.3
+    },
+    {
+      "outcome": "ePVS density",
+      "group1": "A",
+      "group2": "D",
+      "mean_diff": 0.0209,
+      "p_adj": 0.8963,
+      "reject_H0": false,
+      "cohens_d": -0.16
+    },
+    {
+      "outcome": "ePVS density",
+      "group1": "B",
+      "group2": "C",
+      "mean_diff": -0.1236,
+      "p_adj": 0.0547,
+      "reject_H0": false,
+      "cohens_d": 0.87
+    },
+    {
+      "outcome": "ePVS density",
+      "group1": "B",
+      "group2": "D",
+      "mean_diff": -0.1431,
+      "p_adj": 0.0142,
+      "reject_H0": true,
+      "cohens_d": 1.1
+    },
+    {
+      "outcome": "ePVS density",
+      "group1": "C",
+      "group2": "D",
+      "mean_diff": -0.0195,
+      "p_adj": 0.9455,
+      "reject_H0": false,
+      "cohens_d": 0.15
+    }
+  ],
+  "regional_exploratory": [
+    {
+      "region": "Frontal",
+      "ancova_group_F": 4.021602304564117,
+      "ancova_group_p": 0.009175425152863223,
+      "partial_eta2": 0.09347867325103021,
+      "p_fdr": 0.045877125764316115
+    },
+    {
+      "region": "Parietal",
+      "ancova_group_F": 0.6133655384460451,
+      "ancova_group_p": 0.6076633111681156,
+      "partial_eta2": 0.015483802754672643,
+      "p_fdr": 0.6076633111681156
+    },
+    {
+      "region": "Temporal",
+      "ancova_group_F": 2.1012918620185594,
+      "ancova_group_p": 0.1038098589869894,
+      "partial_eta2": 0.05112471571630453,
+      "p_fdr": 0.2416508868633737
+    },
+    {
+      "region": "Occipital",
+      "ancova_group_F": 1.832846846984154,
+      "ancova_group_p": 0.1449905321180242,
+      "partial_eta2": 0.04488658000879811,
+      "p_fdr": 0.2416508868633737
+    },
+    {
+      "region": "Insula",
+      "ancova_group_F": 1.5300760207846025,
+      "ancova_group_p": 0.21037312146041284,
+      "partial_eta2": 0.037751619809445955,
+      "p_fdr": 0.26296640182551606
+    }
+  ]
+}

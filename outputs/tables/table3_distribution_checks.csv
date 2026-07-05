@@ -1,0 +1,5 @@
+outcome,skewness,shapiro_p_raw,shapiro_p_log,decision
+pvs_count,0.86,0.0006,0.6957,log-transform
+density,0.47,0.0366,0.2272,keep raw
+vol_fraction,0.71,0.0045,0.5218,log-transform
+diameter,0.23,0.4936,0.7419,keep raw

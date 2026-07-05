@@ -1,0 +1,15 @@
+Check,Result
+Rows,1612
+Columns,11
+Unique subjects,124
+Unique masks,13
+Missing values,0
+Duplicate subject-mask rows,0
+Negative numeric values,0
+"Modality (constant, not used as covariate)",epc
+Age range (years),7.38 to 17.20
+All subjects have 13 masks,True
+Demographics constant per subject,True
+Whole-brain count = Left + Right,True
+Zero-ePVS rows (no ePVS detected),21 (1.3%)
+Subjects per group,A=55; B=11; C=26; D=32

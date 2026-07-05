@@ -1,0 +1,7 @@
+outcome,group1,group2,mean_diff,p_adj,reject_H0,cohens_d
+ePVS density,A,B,0.164,0.0018,True,-1.19
+ePVS density,A,C,0.0404,0.5842,False,-0.3
+ePVS density,A,D,0.0209,0.8963,False,-0.16
+ePVS density,B,C,-0.1236,0.0547,False,0.87
+ePVS density,B,D,-0.1431,0.0142,True,1.1
+ePVS density,C,D,-0.0195,0.9455,False,0.15
